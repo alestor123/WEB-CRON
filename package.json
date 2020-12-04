@@ -1,0 +1,26 @@
+{
+  "name": "web-cron",
+  "version": "1.0.0",
+  "description": "This is a simple code for a web based cron service ",
+  "main": "App.js",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "node-cron": "^2.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alestor123/WEB-CRON.git"
+  },
+  "author": "Alestor Aldous",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alestor123/WEB-CRON/issues"
+  },
+  "homepage": "https://github.com/alestor123/WEB-CRON#readme"
+}
