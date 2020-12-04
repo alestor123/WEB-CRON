@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "This is a simple code for a web based cron service ",
   "main": "App.js",
+  "bin": {
+    "web-cron": "App.js"
+  },
   "dependencies": {
     "axios": "^0.21.0",
     "dotenv": "^8.2.0",
