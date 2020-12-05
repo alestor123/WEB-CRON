@@ -12,12 +12,20 @@ var finalCron =  cron.split('0').join('*');
 if(!confirm(`Cron:${cron} , Command:${ command.value}`)){
     console.log('confirmed comman')
 }
- else if (confirm("Are You Sure To Deploy")) {
+ else if (
+confirm("Are You Sure To Deploy")) {
+var authKey =  prompt('Auth Key:','Key')
 axios.post('/api/v1', {
+key:authKey,
 command: command.value,
 cron: finalCron
 })
-alert('Sucess')  
+.then((response) => {
+    alert(response.data);
+}).catch(function (error) {
+    alert(error.response.data)
+})
+  
 } else {
 alert('Aborted')
 }

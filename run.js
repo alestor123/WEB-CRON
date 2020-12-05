@@ -1,8 +1,11 @@
 var axios = require('axios')
 axios.post('http://localhost:3000/api/v1', {
-command:'rm -r ./err.log',
+key:'dddd',
+command:'ls',
 cron:'1 * * * * *'
-})  
+}).then((response) => {
+    console.log(response.data);
+})
 
 // add auth 
 // add cli
