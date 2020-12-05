@@ -8,5 +8,4 @@ cron:'1 * * * * *'
 })
 
 // add docs 
-// disp auth key in cli
 // add crud crone 
