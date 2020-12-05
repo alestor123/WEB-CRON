@@ -9,7 +9,7 @@ var inputs = document.getElementsByName("quantity"),
         return input.value;
     }).join(' ');
 var finalCron =  cron.split('0').join('*');
-if(!confirm(`Cron:${cron} , Command:${ command.value}`)){
+if(!confirm(`Cron: ${cron} , Command : ${ command.value}`)){
     console.log('confirmed comman')
 }
  else if (
