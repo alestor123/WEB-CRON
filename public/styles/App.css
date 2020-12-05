@@ -6,7 +6,6 @@ body {
     text-align: center;
 }
 #cron{
-    margin: auto;
     width: 70%;
     border: 3px solid green;
     padding: 40px;
@@ -23,7 +22,6 @@ padding: 5px;
 }
 input[type=text], select {
     display: flex;
-
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -32,11 +30,10 @@ input[type=text], select {
     border-radius: 4px;
     box-sizing: border-box;
 }
-    display: flex;
 #deploy{
-  margin: 0;
+display: flex;
   position: absolute;
-  top: 68%;
+  top: 78%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
