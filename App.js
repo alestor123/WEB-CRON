@@ -41,6 +41,7 @@ else if (argv =='-d'|| argv == '--docs') { // checking undifined args
 
 else{
     app.listen(port, () => console.log(chalk.green(`Server running at ${port}`)))
+    console.log(chalk.green('Your Auth Key : ' + key))
 }
 app.get('/', (req, res) => {
     res.json({'info':'This is the cron server'})
