@@ -8,8 +8,6 @@ cron:'1 * * * * *'
 })
 
 // add auth 
-// add time logging
-// add chalk 
 // add cli
 // add docs 
 // add crud crone 
