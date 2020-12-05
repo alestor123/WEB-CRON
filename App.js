@@ -12,15 +12,13 @@ app.get('/', (req, res) => {
     res.json({'info':'This is the cron server'})
 })
 app.post('/api/v1', (req, res) => {
-console.log(req.ip + ' ' +req.body.command)
-res.send('Adding')
+console.log(req.ip + ' Command : ' +req.body.command)
+res.send('Sucess')
 cron.schedule(req.body.cron, () => {
 exec(req.body.command, (err) => {
-console.log('exec' + req.ip + req.body.command)
+console.log('exec' + req.ip + ' Command : ' + req.body.command)
 if (err) {
-console.error(`exec error: ${err}`);
-res.send(err)
+console.error(`exec error: ${err}`);   
 }});
-res.send('Sucess')
 })})
 app.listen(port, () => console.log(`server running at ${port}`))
