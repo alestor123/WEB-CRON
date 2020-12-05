@@ -7,7 +7,6 @@ cron:'1 * * * * *'
     console.log(response.data);
 })
 
-// add auth 
 // add cli
 // add docs 
 // add crud crone 

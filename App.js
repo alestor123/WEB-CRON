@@ -22,11 +22,11 @@ cron.schedule(req.body.cron, () => {
 exec(req.body.command, (err) => {   
 console.log(chalk.red(Date() + ': exec' + req.ip + ' Command : ' + req.body.command))
 if (err) {
-console.error(`exec error: ${err}`);   
+console.error(chalk.red(`exec error: ${err}`));   
 }});
 })}
 else{
     res.status(401).send('Auth Error')
     console.log(chalk.red(Date() + ':' + req.ip + ' Auth Error 401'))
 }})
-app.listen(port, () => console.log(chalk.green(`server running at ${port}`)))
+app.listen(port, () => console.log(chalk.green(`Server running at ${port}`)))
