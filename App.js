@@ -12,7 +12,6 @@ app.use(express.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
     res.json({'info':'This is the cron server'})
 })
-//adding auth
 app.post('/api/v1', (req, res) => {
 console.log(req.ip + ' Command : ' +req.body.command)
 res.send('Sucess')
