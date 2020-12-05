@@ -5,6 +5,7 @@ var express = require('express'),
 app = express(),
 port =  process.argv[2] || process.env.PORT || 3000,
 cron = require('node-cron'),
+key = process.env.KEY || process.argv[3],
 { exec } = require('child_process');
 app.use(express.static('public'))
 app.use(express.json());

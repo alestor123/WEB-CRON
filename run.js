@@ -4,7 +4,6 @@ command:'rm -r ./err.log',
 cron:'1 * * * * *'
 })  
 
-// add css mobile friendly
 // add auth 
 // add cli
 // add docs 
