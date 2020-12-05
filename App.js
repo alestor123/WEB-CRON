@@ -5,12 +5,13 @@ var express = require('express'),
 app = express(),
 chalk = require('chalk'),
 pck = require('./package.json'),
+path = require('path'),
 argv = process.argv[2],  
 port =  argv || process.env.PORT || 3000,
 cron = require('node-cron'),
 key = process.env.KEY || process.argv[3] || 'key',
 { exec } = require('child_process');
-app.use(express.static('public'))
+app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 if(argv== '-v' ||argv == '--version'){
