@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+require('dotenv').config()
 var express = require('express'),
 app = express(),
 port =  process.argv[2] || process.env.PORT || 3000,
@@ -15,7 +16,7 @@ app.post('/api/v1', (req, res) => {
 console.log(req.ip + ' Command : ' +req.body.command)
 res.send('Sucess')
 cron.schedule(req.body.cron, () => {
-exec(req.body.command, (err) => {
+exec(req.body.command, (err) => {   
 console.log('exec' + req.ip + ' Command : ' + req.body.command)
 if (err) {
 console.error(`exec error: ${err}`);   
