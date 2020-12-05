@@ -1,0 +1,43 @@
+body {
+    font-family: monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#cron{
+    margin: auto;
+    width: 70%;
+    border: 3px solid green;
+    padding: 40px;
+}
+#cron h3 {
+text-align: center;
+padding: 5px;
+
+}
+#shell{
+    margin: auto;
+    width: 70%;
+    padding: 30px;
+}
+input[type=text], select {
+    display: flex;
+
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+    display: flex;
+#deploy{
+  margin: 0;
+  position: absolute;
+  top: 68%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
