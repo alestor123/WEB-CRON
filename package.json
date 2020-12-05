@@ -1,6 +1,6 @@
 {
   "name": "web-cron",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "This is a simple code for a web based cron service ",
   "main": "App.js",
   "bin": {
