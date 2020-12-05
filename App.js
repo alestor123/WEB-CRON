@@ -3,6 +3,7 @@
 require('dotenv').config()
 var express = require('express'),
 app = express(),
+chalk = require('chalk')
 port =  process.argv[2] || process.env.PORT || 3000,
 cron = require('node-cron'),
 key = process.env.KEY || process.argv[3],
@@ -15,17 +16,17 @@ app.get('/', (req, res) => {
 })
 app.post('/api/v1', (req, res) => {
 if(req.body.key==key){
-console.log(req.ip + ' Command : ' +req.body.command)
+console.log(chalk.green(Date() + ': Command : ' +req.body.command))
 res.send('Sucess')
 cron.schedule(req.body.cron, () => {
 exec(req.body.command, (err) => {   
-console.log('exec' + req.ip + ' Command : ' + req.body.command)
+console.log(chalk.red(Date() + ': exec' + req.ip + ' Command : ' + req.body.command))
 if (err) {
 console.error(`exec error: ${err}`);   
 }});
 })}
 else{
     res.status(401).send('Auth Error')
-    console.log(req.ip + ' Auth Error 401')
+    console.log(chalk.red(Date() + ':' + req.ip + ' Auth Error 401'))
 }})
-app.listen(port, () => console.log(`server running at ${port}`))
+app.listen(port, () => console.log(chalk.green(`server running at ${port}`)))
