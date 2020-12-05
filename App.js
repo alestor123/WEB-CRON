@@ -1,8 +1,9 @@
 var express = require('express'),
 app = express(),
-port =  process.argv[2] || process.env.PORT || 3000 ,
+port =  process.argv[2] || process.env.PORT || 3000,
 cron = require('node-cron'),
 { exec } = require('child_process');
+app.use(express.static('public'))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
