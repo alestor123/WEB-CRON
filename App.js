@@ -43,9 +43,7 @@ else{
     app.listen(port, () => console.log(chalk.green(`Server running at ${port}`)))
     console.log(chalk.green('Your Auth Key : ' + key))
 }
-app.get('/', (req, res) => {
-    res.json({'info':'This is the cron server'})
-})
+
 app.post('/api/v1', (req, res) => {
 if(req.body.key==key){
 console.log(chalk.green(Date() + ': Command : ' +req.body.command))
